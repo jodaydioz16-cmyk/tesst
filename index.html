@@ -1,9 +1,168 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff0f5">
+
+    <title>A Little Birthday Universe ✨</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Decorations -->
+    <div class="decoration">
+        <span class="float-item star">✦</span>
+        <span class="float-item heart">♡</span>
+        <span class="float-item star">✧</span>
+        <span class="float-item heart">♥</span>
+        <span class="float-item star">✦</span>
+    </div>
+
+    <!-- Opening Screen -->
+    <section id="opening" class="opening">
+        <div class="opening-card">
+            <span class="opening-icon">🎂</span>
+            <p class="small-text">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+            <h1>Something lovely<br>is waiting for you.</h1>
+            <p class="opening-desc">
+                A little surprise, made just for you.
+            </p>
+
+            <button id="openButton" class="main-button">
+                Open your surprise ✨
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Website -->
+    <main id="mainContent" class="hidden">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+
+                <span class="eyebrow">✦ TODAY IS YOUR DAY ✦</span>
+
+                <h1>
+                    Happy Birthday,
+                    <span class="name">Someone Special!</span>
+                </h1>
+
+                <p>
+                    Another year, another chapter,
+                    and another reason to celebrate you.
+                </p>
+
+                <div class="cake">🎂</div>
+
+                <a href="#message" class="main-button">
+                    Let's celebrate ↓
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Memories -->
+        <section class="memories">
+            <div class="section-heading">
+                <span class="eyebrow">LITTLE MOMENTS</span>
+                <h2>Beautiful memories.</h2>
+                <p>Some moments deserve to be remembered.</p>
+            </div>
+
+            <div class="photo-gallery">
+
+                <div class="photo-card photo-one">
+                    <img src="images/photo1.jpg" alt="Memory one">
+                    <p>A little moment ♡</p>
+                </div>
+
+                <div class="photo-card photo-two">
+                    <img src="images/photo2.jpg" alt="Memory two">
+                    <p>Good times ✨</p>
+                </div>
+
+                <div class="photo-card photo-three">
+                    <img src="images/photo3.jpg" alt="Memory three">
+                    <p>Forever special</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Birthday Message -->
+        <section id="message" class="message-section">
+            <div class="message-card">
+
+                <span class="eyebrow">A LITTLE MESSAGE</span>
+
+                <h2>Dear you,</h2>
+
+                <p>
+                    Happy birthday! 🎉
+                </p>
+
+                <p>
+                    Semoga di usia yang baru ini,
+                    banyak hal baik datang menghampirimu.
+                    Semoga semua impian yang sedang kamu
+                    perjuangkan perlahan menemukan jalannya.
+                </p>
+
+                <p>
+                    Jangan lupa bahagia, jangan lupa istirahat,
+                    dan jangan pernah berhenti menjadi dirimu sendiri.
+                </p>
+
+                <p class="signature">
+                    With lots of love, ♡
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Surprise -->
+        <section class="surprise-section">
+
+            <span class="eyebrow">ONE LAST THING</span>
+
+            <h2>Wait... there's more!</h2>
+
+            <p>I have one more little surprise for you.</p>
+
+            <button id="surpriseButton" class="main-button">
+                Click for a surprise 🎁
+            </button>
+
+            <div id="surpriseMessage" class="surprise-message hidden">
+                <div class="gift">💝</div>
+                <h2>You deserve all the happiness!</h2>
+                <p>
+                    May this new chapter be filled with
+                    beautiful things, unexpected joy,
+                    and countless reasons to smile.
+                </p>
+                <span>Happy Birthday! ♡</span>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            Made with ♡, just for you.
+            <p>© 2026 A Little Birthday Universe</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
