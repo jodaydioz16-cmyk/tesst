@@ -1,0 +1,463 @@
+
+/* =========================
+   GLOBAL
+========================= */
+
+:root {
+    --pink: #f4a7bb;
+    --dark-pink: #d77b9a;
+    --cream: #fff8f3;
+    --lavender: #e9def7;
+    --text: #594650;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.float-item {
+    position: absolute;
+    animation: floating 5s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.star {
+    color: #e6a7bd;
+    font-size: 28px;
+}
+
+.heart {
+    color: #e89bb5;
+    font-size: 30px;
+}
+
+.float-item:nth-child(1) {
+    top: 15%;
+    left: 8%;
+}
+
+.float-item:nth-child(2) {
+    top: 40%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.float-item:nth-child(3) {
+    top: 70%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.float-item:nth-child(4) {
+    top: 80%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.float-item:nth-child(5) {
+    top: 20%;
+    right: 25%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(12deg);
+    }
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.main-button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    background: var(--dark-pink);
+    color: white;
+
+    padding: 15px 28px;
+    border-radius: 50px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px #d77b9a35;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    background: #c96889;
+    box-shadow: 0 12px 30px #d77b9a55;
+}
+
+/* =========================
+   OPENING
+========================= */
+
+.opening {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, #f8d9e3, transparent 40%),
+        radial-gradient(circle at bottom right, #e9def7, transparent 40%),
+        var(--cream);
+}
+
+.opening-card {
+    text-align: center;
+    max-width: 550px;
+    padding: 45px 25px;
+
+    animation: appear 1s ease;
+}
+
+.opening-icon {
+    display: block;
+    font-size: 65px;
+    margin-bottom: 25px;
+    animation: floating 3s infinite;
+}
+
+.small-text,
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--dark-pink);
+}
+
+.opening-card h1 {
+    font-size: clamp(35px, 6vw, 55px);
+    margin: 22px 0;
+    line-height: 1.2;
+}
+
+.opening-desc {
+    margin-bottom: 30px;
+    color: #947b87;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 25px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #f9dce6, transparent 40%),
+        radial-gradient(circle at 80% 80%, #e7dafa, transparent 40%);
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1.2s ease;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.name {
+    display: block;
+    color: var(--dark-pink);
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+    color: #927b85;
+}
+
+.cake {
+    font-size: 85px;
+    margin: 30px 0;
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+    padding: 110px 25px;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading h2,
+.surprise-section h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #927b85;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.photo-card {
+    width: 220px;
+    padding: 12px 12px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px #68465b20;
+    transition: 0.4s ease;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.photo-card p {
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.photo-two {
+    animation-delay: 1s;
+    transform: rotate(4deg);
+}
+
+.photo-one {
+    transform: rotate(-5deg);
+}
+
+.photo-three {
+    animation-delay: 2s;
+    transform: rotate(3deg);
+}
+
+.photo-card:hover {
+    transform: translateY(-15px) rotate(0deg) scale(1.05);
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-section {
+    padding: 100px 25px;
+    background: #f9e8ee;
+    display: flex;
+    justify-content: center;
+}
+
+.message-card {
+    background: white;
+    max-width: 650px;
+    width: 100%;
+    padding: 55px 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 50px #aa718520;
+}
+
+.message-card h2 {
+    font-size: 42px;
+    margin: 25px 0;
+}
+
+.message-card p {
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #826e78;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--dark-pink) !important;
+}
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise-section {
+    text-align: center;
+    padding: 120px 25px;
+}
+
+.surprise-section > p {
+    margin-bottom: 30px;
+    color: #927b85;
+}
+
+.surprise-message {
+    max-width: 500px;
+    margin: 45px auto 0;
+    padding: 35px;
+    background: #f9e8ee;
+    border-radius: 25px;
+    animation: appear 0.8s ease;
+}
+
+.gift {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: floating 2s infinite;
+}
+
+.surprise-message h2 {
+    font-size: 30px;
+}
+
+.surprise-message p {
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.surprise-message span {
+    color: var(--dark-pink);
+    font-weight: 700;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    z-index: 100;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #f9e8ee;
+    color: #a47e8c;
+    font-size: 13px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .photo-gallery {
+        gap: 25px;
+    }
+
+    .photo-card {
+        width: min(80%, 260px);
+    }
+
+    .photo-card img {
+        height: 230px;
+    }
+
+    .message-card {
+        padding: 40px 25px;
+    }
+
+    .float-item {
+        font-size: 20px;
+    }
+
+}
